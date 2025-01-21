@@ -130,6 +130,121 @@ p {
   max-width: var(--max-width);
 }
 
+.btn{
+  color: var(--clr-black);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-grey-9);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  margin-top: 5px;
+  font-weight: bold
+}
+.btn:hover{
+  color: var(--clr-white);
+  background: var(--clr-gold);
+}
+.view-orders{
+  display:flex;
+  align-items:center; 
+  cursor: pointer;
+  border: 2px solid var(--clr-gold);
+  padding:10px;
+  border-radius:5px; 
+  border-color:var(--clr-gold) 
+}
+.view-orders:hover{
+  color: var(--clr-white);
+  background: var(--clr-gold);
+}
+
+/* OrderHistory component transition */
+.order-history-enter {
+  opacity: 0;
+  transform: translateY(50px);  /* Starts from below */
+}
+
+.order-history-enter-active {
+  opacity: 1;
+  transform: translateY(0);  /* Moves to its natural position */
+  transition: opacity 300ms, transform 300ms;
+}
+
+.order-history-exit {
+  opacity: 1;
+  transform: translateY(0);  /* Starts from current position */
+}
+
+.order-history-exit-active {
+  opacity: 0;
+  transform: translateY(50px);  /* Slides down */
+  transition: opacity 300ms, transform 300ms;
+}
+
+.back-btn{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid var(--clr-gold);
+  padding:10px;
+  border-radius:5px; 
+  border-color:var(--clr-gold)
+}
+.place-btn{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid var(--clr-gold);
+  padding:10px;
+  border-radius:5px; 
+  border-color:var(--clr-gold)
+}
+.place-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.place-btn:hover{
+  color: var(--clr-white);
+  background: var(--clr-gold);
+}
+
+.card-dd{
+  position: relative;
+  margin-block: 2rem;
+}
+.list-dd{
+  width: 100%;
+}
+.order-details {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(197, 157, 95, 0.5);
+  margin: 20px;
+}
+
+.order-details h2 {
+  margin-bottom: 20px;
+}
+
+.order-details p {
+  margin: 10px 0;
+}
+
+.order-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-details ul li {
+  margin: 5px 0;
+}
+
+
 @media screen and (min-width: 992px) {
   .section {
     width: 95vw;
@@ -146,11 +261,15 @@ Menu
   padding: 5rem 0;
 }
 .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
   margin-bottom: 2rem;
+
 }
 .underline {
-  width: 5rem;
+  width: 8rem;
   height: 0.25rem;
   background: var(--clr-gold);
   margin-left: auto;
@@ -233,4 +352,5 @@ Menu
   .photo {
     height: 150px;
   }
+
 }
